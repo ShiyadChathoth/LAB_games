@@ -1,0 +1,1477 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Abdul Rahman (Rahman Rich) | Empowerment Trainer</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Montserrat:wght@600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <style>
+        /* --- General & Global Styles --- */
+        :root {
+            --primary-color: #0a2d57; /* Dark Blue */
+            --secondary-color: #f4f7fa; /* Light Grey Background */
+            --accent-color: #d4a017; /* Gold */
+            --text-dark: #333;
+            --text-light: #fff;
+            --font-heading: 'Montserrat', sans-serif;
+            --font-body: 'Lato', sans-serif;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: var(--font-body);
+            color: var(--text-dark);
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: auto;
+            padding: 0 2rem;
+        }
+
+        section {
+            padding: 5rem 0;
+        }
+
+        h1, h2, h3 {
+            font-family: var(--font-heading);
+            margin-bottom: 1rem;
+        }
+
+        h2 {
+            font-size: 2.5rem;
+            text-align: center;
+            margin-bottom: 3rem;
+            color: var(--primary-color);
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 0.8rem 1.8rem;
+            background: var(--accent-color);
+            color: var(--text-light);
+            border: none;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: background-color 0.3s ease;
+            cursor: pointer; /* Ensure button shows pointer */
+        }
+
+        .btn:hover {
+            background: #b88a0f;
+        }
+
+        /* --- START: NEW Small Button Style --- */
+        .btn-small {
+            display: inline-block;
+            padding: 0.5rem 1rem; /* Smaller padding */
+            background: var(--primary-color); /* Use primary color */
+            color: var(--text-light);
+            border: none;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 0.9rem; /* Slightly smaller font */
+            transition: background-color 0.3s ease;
+            margin-top: 1rem; /* Add space above the button */
+        }
+        .btn-small:hover {
+             background: #071f3d; /* Darker primary color */
+        }
+        /* --- END: NEW Small Button Style --- */
+
+        /* --- Header & Navigation --- */
+        .header {
+            background: var(--text-light);
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            left: 0;
+            z-index: 1000;
+        }
+        
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 70px;
+        }
+
+        .navbar .logo {
+            font-family: var(--font-heading);
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--primary-color);
+            text-decoration: none;
+        }
+
+        .navbar ul {
+            display: flex;
+            list-style: none;
+        }
+
+        .navbar ul li a {
+            color: var(--primary-color);
+            padding: 1rem;
+            text-decoration: none;
+            font-weight: 700;
+            transition: color 0.3s ease;
+        }
+
+        .navbar ul li a:hover, .navbar ul li a.active {
+            color: var(--accent-color);
+        }
+
+        .navbar .cta-button a {
+            background-color: var(--accent-color);
+            color: var(--text-light);
+            padding: 0.5rem 1rem;
+            border-radius: 5px;
+            margin-left: 1rem;
+        }
+        .navbar .cta-button a:hover {
+            background-color: #b88a0f;
+            color: var(--text-light);
+        }
+        
+        .hamburger {
+            display: none;
+            cursor: pointer;
+            font-size: 1.8rem;
+            color: var(--primary-color);
+        }
+
+        /* --- Hero Section --- */
+        #home {
+            height: 100vh;
+            animation: changeBg 63s infinite ease-in-out;
+            background-size: cover;
+            background-position: center; 
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: var(--text-light);
+            padding: 0 1rem;
+            overflow: hidden;
+        }
+
+        #home h1 {
+            font-size: 3.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        #home h3 {
+            font-size: 1.8rem;
+            font-family: var(--font-body);
+            font-weight: 400;
+            margin-bottom: 1.5rem;
+        }
+
+        #home p {
+            max-width: 600px;
+            margin-bottom: 2rem;
+            font-size: 1.1rem;
+        }
+
+        /* --- Background Slideshow (9 images) --- */
+        @keyframes changeBg {
+            0%, 100% {
+                background-image: linear-gradient(rgba(10, 45, 87, 0.7), rgba(10, 45, 87, 0.7)), url('/assets/Photos/s1.png');
+            }
+            11.11% {
+                background-image: linear-gradient(rgba(10, 45, 87, 0.7), rgba(10, 45, 87, 0.7)), url('/assets/Photos/s2.png');
+            }
+            22.22% {
+                background-image: linear-gradient(rgba(10, 45, 87, 0.7), rgba(10, 45, 87, 0.7)), url('/assets/Photos/s3.png');
+            }
+            33.33% {
+                background-image: linear-gradient(rgba(10, 45, 87, 0.7), rgba(10, 45, 87, 0.7)), url('/assets/Photos/s4.png');
+            }
+            44.44% {
+                background-image: linear-gradient(rgba(10, 45, 87, 0.7), rgba(10, 45, 87, 0.7)), url('/assets/Photos/s5.png');
+            }
+            55.55% {
+                background-image: linear-gradient(rgba(10, 45, 87, 0.7), rgba(10, 45, 87, 0.7)), url('/assets/Photos/s6.png');
+            }
+            66.66% {
+                background-image: linear-gradient(rgba(10, 45, 87, 0.7), rgba(10, 45, 87, 0.7)), url('/assets/Photos/s7.png');
+            }
+            77.77% {
+                background-image: linear-gradient(rgba(10, 45, 87, 0.7), rgba(10, 45, 87, 0.7)), url('/assets/Photos/s8.png');
+            }
+            88.88% {
+                background-image: linear-gradient(rgba(10, 45, 87, 0.7), rgba(10, 45, 87, 0.7)), url('/assets/Photos/s9.png');
+            }
+        }
+
+        /* --- Text Cycle Keyframes for 63s loop --- */
+        @keyframes cycle-h1 {
+            0%, 3.33% { opacity: 0; transform: translateY(30px); } 3.96% { opacity: 1; transform: translateY(0); } 10.8% { opacity: 1; transform: translateY(0); } 11.11% { opacity: 0; transform: translateY(-30px); }
+            11.12%, 14.44% { opacity: 0; transform: translateY(30px); } 15.07% { opacity: 1; transform: translateY(0); } 21.91% { opacity: 1; transform: translateY(0); } 22.22% { opacity: 0; transform: translateY(-30px); }
+            22.23%, 25.55% { opacity: 0; transform: translateY(30px); } 26.18% { opacity: 1; transform: translateY(0); } 33.02% { opacity: 1; transform: translateY(0); } 33.33% { opacity: 0; transform: translateY(-30px); }
+            33.34%, 36.66% { opacity: 0; transform: translateY(30px); } 37.29% { opacity: 1; transform: translateY(0); } 44.13% { opacity: 1; transform: translateY(0); } 44.44% { opacity: 0; transform: translateY(-30px); }
+            44.45%, 47.77% { opacity: 0; transform: translateY(30px); } 48.40% { opacity: 1; transform: translateY(0); } 55.24% { opacity: 1; transform: translateY(0); } 55.55% { opacity: 0; transform: translateY(-30px); }
+            55.56%, 58.88% { opacity: 0; transform: translateY(30px); } 59.51% { opacity: 1; transform: translateY(0); } 66.35% { opacity: 1; transform: translateY(0); } 66.66% { opacity: 0; transform: translateY(-30px); }
+            66.67%, 69.99% { opacity: 0; transform: translateY(30px); } 70.62% { opacity: 1; transform: translateY(0); } 77.46% { opacity: 1; transform: translateY(0); } 77.77% { opacity: 0; transform: translateY(-30px); }
+            77.78%, 81.10% { opacity: 0; transform: translateY(30px); } 81.73% { opacity: 1; transform: translateY(0); } 88.57% { opacity: 1; transform: translateY(0); } 88.88% { opacity: 0; transform: translateY(-30px); }
+            88.89%, 92.21% { opacity: 0; transform: translateY(30px); } 92.84% { opacity: 1; transform: translateY(0); } 99.68% { opacity: 1; transform: translateY(0); } 100% { opacity: 0; transform: translateY(-30px); }
+        }
+        @keyframes cycle-h3 {
+            0%, 3.96% { opacity: 0; transform: translateY(30px); } 4.59% { opacity: 1; transform: translateY(0); } 10.8% { opacity: 1; transform: translateY(0); } 11.11% { opacity: 0; transform: translateY(-30px); }
+            11.12%, 15.07% { opacity: 0; transform: translateY(30px); } 15.70% { opacity: 1; transform: translateY(0); } 21.91% { opacity: 1; transform: translateY(0); } 22.22% { opacity: 0; transform: translateY(-30px); }
+            22.23%, 26.18% { opacity: 0; transform: translateY(30px); } 26.81% { opacity: 1; transform: translateY(0); } 33.02% { opacity: 1; transform: translateY(0); } 33.33% { opacity: 0; transform: translateY(-30px); }
+            33.34%, 37.30% { opacity: 0; transform: translateY(30px); } 37.93% { opacity: 1; transform: translateY(0); } 44.13% { opacity: 1; transform: translateY(0); } 44.44% { opacity: 0; transform: translateY(-30px); }
+            44.45%, 48.41% { opacity: 0; transform: translateY(30px); } 49.04% { opacity: 1; transform: translateY(0); } 55.24% { opacity: 1; transform: translateY(0); } 55.55% { opacity: 0; transform: translateY(-30px); }
+            55.56%, 59.52% { opacity: 0; transform: translateY(30px); } 60.15% { opacity: 1; transform: translateY(0); } 66.35% { opacity: 1; transform: translateY(0); } 66.66% { opacity: 0; transform: translateY(-30px); }
+            66.67%, 70.63% { opacity: 0; transform: translateY(30px); } 71.26% { opacity: 1; transform: translateY(0); } 77.46% { opacity: 1; transform: translateY(0); } 77.77% { opacity: 0; transform: translateY(-30px); }
+            77.78%, 81.74% { opacity: 0; transform: translateY(30px); } 82.37% { opacity: 1; transform: translateY(0); } 88.57% { opacity: 1; transform: translateY(0); } 88.88% { opacity: 0; transform: translateY(-30px); }
+            88.89%, 92.85% { opacity: 0; transform: translateY(30px); } 93.48% { opacity: 1; transform: translateY(0); } 99.68% { opacity: 1; transform: translateY(0); } 100% { opacity: 0; transform: translateY(-30px); }
+        }
+        @keyframes cycle-p {
+            0%, 4.6% { opacity: 0; transform: translateY(30px); } 5.23% { opacity: 1; transform: translateY(0); } 10.8% { opacity: 1; transform: translateY(0); } 11.11% { opacity: 0; transform: translateY(-30px); }
+            11.12%, 15.71% { opacity: 0; transform: translateY(30px); } 16.34% { opacity: 1; transform: translateY(0); } 21.91% { opacity: 1; transform: translateY(0); } 22.22% { opacity: 0; transform: translateY(-30px); }
+            22.23%, 26.82% { opacity: 0; transform: translateY(30px); } 27.45% { opacity: 1; transform: translateY(0); } 33.02% { opacity: 1; transform: translateY(0); } 33.33% { opacity: 0; transform: translateY(-30px); }
+            33.34%, 37.94% { opacity: 0; transform: translateY(30px); } 38.57% { opacity: 1; transform: translateY(0); } 44.13% { opacity: 1; transform: translateY(0); } 44.44% { opacity: 0; transform: translateY(-30px); }
+            44.45%, 49.05% { opacity: 0; transform: translateY(30px); } 49.68% { opacity: 1; transform: translateY(0); } 55.24% { opacity: 1; transform: translateY(0); } 55.55% { opacity: 0; transform: translateY(-30px); }
+            55.56%, 60.16% { opacity: 0; transform: translateY(30px); } 60.79% { opacity: 1; transform: translateY(0); } 66.35% { opacity: 1; transform: translateY(0); } 66.66% { opacity: 0; transform: translateY(-30px); }
+            66.67%, 71.27% { opacity: 0; transform: translateY(30px); } 71.90% { opacity: 1; transform: translateY(0); } 77.46% { opacity: 1; transform: translateY(0); } 77.77% { opacity: 0; transform: translateY(-30px); }
+            77.78%, 82.38% { opacity: 0; transform: translateY(30px); } 83.01% { opacity: 1; transform: translateY(0); } 88.57% { opacity: 1; transform: translateY(0); } 88.88% { opacity: 0; transform: translateY(-30px); }
+            88.89%, 93.49% { opacity: 0; transform: translateY(30px); } 94.12% { opacity: 1; transform: translateY(0); } 99.68% { opacity: 1; transform: translateY(0); } 100% { opacity: 0; transform: translateY(-30px); }
+        }
+        @keyframes cycle-btn {
+            0%, 5.23% { opacity: 0; transform: translateY(30px); } 5.86% { opacity: 1; transform: translateY(0); } 10.8% { opacity: 1; transform: translateY(0); } 11.11% { opacity: 0; transform: translateY(-30px); }
+            11.12%, 16.34% { opacity: 0; transform: translateY(30px); } 16.97% { opacity: 1; transform: translateY(0); } 21.91% { opacity: 1; transform: translateY(0); } 22.22% { opacity: 0; transform: translateY(-30px); }
+            22.23%, 27.45% { opacity: 0; transform: translateY(30px); } 28.08% { opacity: 1; transform: translateY(0); } 33.02% { opacity: 1; transform: translateY(0); } 33.33% { opacity: 0; transform: translateY(-30px); }
+            33.34%, 38.57% { opacity: 0; transform: translateY(30px); } 39.20% { opacity: 1; transform: translateY(0); } 44.13% { opacity: 1; transform: translateY(0); } 44.44% { opacity: 0; transform: translateY(-30px); }
+            44.45%, 49.68% { opacity: 0; transform: translateY(30px); } 50.31% { opacity: 1; transform: translateY(0); } 55.24% { opacity: 1; transform: translateY(0); } 55.55% { opacity: 0; transform: translateY(-30px); }
+            55.56%, 60.79% { opacity: 0; transform: translateY(30px); } 61.42% { opacity: 1; transform: translateY(0); } 66.35% { opacity: 1; transform: translateY(0); } 66.66% { opacity: 0; transform: translateY(-30px); }
+            66.67%, 71.90% { opacity: 0; transform: translateY(30px); } 72.53% { opacity: 1; transform: translateY(0); } 77.46% { opacity: 1; transform: translateY(0); } 77.77% { opacity: 0; transform: translateY(-30px); }
+            77.78%, 83.01% { opacity: 0; transform: translateY(30px); } 83.64% { opacity: 1; transform: translateY(0); } 88.57% { opacity: 1; transform: translateY(0); } 88.88% { opacity: 0; transform: translateY(-30px); }
+            88.89%, 94.12% { opacity: 0; transform: translateY(30px); } 94.75% { opacity: 1; transform: translateY(0); } 99.68% { opacity: 1; transform: translateY(0); } 100% { opacity: 0; transform: translateY(-30px); }
+        }
+
+        /* --- Apply looping animations --- */
+        #home h1 {
+            animation: cycle-h1 63s infinite ease-in-out;
+        }
+        #home h3 {
+            animation: cycle-h3 63s infinite ease-in-out;
+        }
+        #home p {
+            animation: cycle-p 63s infinite ease-in-out;
+        }
+        #home .btn {
+            animation: cycle-btn 63s infinite ease-in-out;
+        }
+        
+        /* --- About Section --- */
+        #about .about-content {
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            gap: 3rem;
+            align-items: center;
+        }
+        
+        #about img {
+            width: 100%;
+            max-width: 350px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+
+        /* --- Services Section --- */
+        #services {
+            background-color: var(--secondary-color);
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+        }
+
+        .service-card {
+            background: var(--text-light);
+            padding: 2rem;
+            text-align: center;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .service-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+        }
+
+        .service-card i {
+            font-size: 3rem;
+            color: var(--accent-color);
+            margin-bottom: 1rem;
+        }
+        
+        .service-card h3 {
+             color: var(--primary-color);
+             font-size: 1.3rem;
+             margin-bottom: 0.8rem; /* Adjusted margin */
+        }
+        .service-card p {
+            margin-bottom: 0; /* Remove default bottom margin if button follows */
+        }
+
+
+        /* --- Experience Section --- */
+        .experience-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+        }
+        
+        .timeline {
+            position: relative;
+            padding-left: 2rem;
+        }
+
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 10px;
+            bottom: 10px;
+            width: 2px;
+            background: var(--accent-color);
+        }
+
+        .timeline-item {
+            margin-bottom: 2rem;
+            position: relative;
+        }
+        
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: -39px;
+            top: 7px;
+            width: 15px;
+            height: 15px;
+            border-radius: 50%;
+            background: var(--accent-color);
+            border: 2px solid var(--text-light);
+        }
+
+        .timeline-item h4 {
+            font-size: 1.1rem;
+            color: var(--primary-color);
+        }
+
+        .timeline-item p {
+            color: #666;
+            font-style: italic;
+        }
+        
+        .qualifications-list ul {
+            list-style-type: none;
+        }
+        
+        .qualifications-list li {
+            font-size: 1.1rem;
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+        }
+
+        .qualifications-list i {
+            color: var(--accent-color);
+            margin-right: 1rem;
+        }
+
+        /* --- Gallery Section --- */
+        #gallery {
+            background-color: var(--secondary-color);
+        }
+
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .gallery-item {
+            overflow: hidden;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            height: 250px;
+            cursor: pointer;
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+            transition: transform 0.4s ease;
+        }
+
+        .gallery-item:hover img {
+            transform: scale(1.1);
+        }
+        
+        /* --- Gallery Lightbox (Click to View Full) --- */
+        .lightbox {
+            display: none; /* Hidden by default */
+            position: fixed;
+            z-index: 9999;
+            padding-top: 50px;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(0, 0, 0, 0.9);
+        }
+
+        .lightbox-content {
+            margin: auto;
+            display: block;
+            width: 80%;
+            max-width: 700px;
+            animation: zoom 0.6s;
+        }
+
+        @keyframes zoom {
+            from {transform: scale(0.1)}
+            to {transform: scale(1)}
+        }
+
+        .lightbox-close {
+            position: absolute;
+            top: 15px;
+            right: 35px;
+            color: #f1f1f1;
+            font-size: 40px;
+            font-weight: bold;
+            transition: 0.3s;
+            cursor: pointer;
+        }
+
+        .lightbox-close:hover,
+        .lightbox-close:focus {
+            color: #bbb;
+            text-decoration: none;
+        }
+
+        @media (max-width: 700px){
+            .lightbox-content {
+                width: 95%;
+            }
+        }
+
+        /* --- Styles for Show More Button --- */
+        .gallery-item.hidden, .poster-item.hidden {
+            display: none;
+        }
+        .gallery-btn-container, .poster-btn-container {
+            text-align: center;
+            margin-top: 2rem; /* Add some space above the button */
+        }
+
+        /* --- NEW: Poster Section Styles --- */
+        #posters {
+            background-color: var(--text-light); /* Alternating color */
+        }
+        .poster-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+        }
+        .poster-item {
+            overflow: hidden;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            height: 350px; /* Posters are often taller */
+            cursor: pointer;
+        }
+        .poster-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover; /* Use cover to fill the space */
+            display: block;
+            transition: transform 0.4s ease;
+        }
+        .poster-item:hover img {
+            transform: scale(1.1);
+        }
+        
+        /* --- Video Section Styles --- */
+        #videos {
+            background-color: var(--secondary-color); /* Alternating color */
+        }
+
+        .videos-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .video-responsive {
+            position: relative;
+            overflow: hidden;
+            padding-top: 56.25%; /* 16:9 Aspect Ratio */
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+
+        .video-responsive iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: 0;
+        }
+
+        /* --- Contact & Booking Section --- */
+        #contact {
+            background-color: var(--text-light);
+        }
+        
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 3rem;
+            background: var(--secondary-color); /* Light background for contrast */
+            padding: 3rem;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+
+        .booking-form .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .booking-form label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: bold;
+            color: var(--primary-color);
+        }
+
+        .required {
+            color: red;
+            margin-left: 3px;
+        }
+        
+        .booking-form input, .booking-form textarea, .booking-form select {
+            width: 100%;
+            padding: 0.8rem;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-family: var(--font-body);
+            font-size: 1rem;
+            box-sizing: border-box;
+        }
+
+        /* Style for date picker */
+        .booking-form input[type="date"] {
+            -webkit-appearance: none;
+            appearance: none;
+            position: relative;
+        }
+        
+        .booking-form button {
+            width: 100%;
+            padding: 1rem;
+            border: none;
+            background: var(--primary-color);
+            color: var(--text-light);
+            font-size: 1.1rem;
+            font-weight: bold;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+        
+        .booking-form button:hover {
+            background: #071f3d;
+        }
+        
+        .contact-info h3 {
+            color: var(--primary-color);
+        }
+        
+        .contact-info p {
+            margin-bottom: 1.5rem;
+            display: flex;
+            align-items: flex-start;
+            font-size: 1.1rem;
+        }
+        
+        .contact-info i {
+            color: var(--primary-color);
+            margin-right: 1rem;
+            margin-top: 5px;
+            width: 20px;
+            text-align: center;
+        }
+        
+        /* --- Footer --- */
+        footer {
+            background-color: var(--primary-color);
+            color: var(--text-light);
+            text-align: center;
+            padding: 1.5rem 0;
+        }
+
+        /* --- Footer Social Icons --- */
+        .footer-social {
+            margin-bottom: 1rem;
+        }
+        .footer-social a {
+            color: var(--text-light);
+            font-size: 1.8rem;
+            margin: 0 0.75rem;
+            transition: color 0.3s ease;
+        }
+        .footer-social a:hover {
+            color: var(--accent-color);
+        }
+        
+        /* --- Responsive Design --- */
+       @media (max-width: 992px) {
+             .contact-grid {
+                grid-template-columns: 1fr;
+            }
+
+            /* --- RULES TO SHOW HAMBURGER ON TABLETS --- */
+            .navbar ul {
+                display: none;
+                flex-direction: column;
+                position: absolute;
+                top: 70px;
+                left: 0;
+                width: 100%;
+                background: var(--text-light);
+                box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            }
+
+            .navbar ul.active {
+                display: flex;
+            }
+            
+            .navbar ul li {
+                text-align: center;
+                width: 100%;
+            }
+            
+            .navbar ul li a {
+                padding: 1rem;
+                display: block;
+            }
+            
+            .navbar .cta-button a {
+                background-color: transparent;
+                color: var(--primary-color);
+                padding: 1rem;
+                margin-left: 0;
+                border-radius: 0;
+            }
+
+            .navbar .cta-button a:hover {
+                 background-color: transparent;
+                 color: var(--accent-color);
+            }
+
+            .hamburger {
+                display: block;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            h2 {
+                font-size: 2rem;
+            }
+            #home {
+                background-size: contain;
+                background-repeat: no-repeat;
+            }
+            /* Consolidating mobile font rules for #home */
+            #home h1 {
+                font-size: 2rem; 
+                margin-bottom: 0.5rem;
+            }
+            #home h3 {
+                font-size: 1.1rem; 
+                margin-bottom: 1rem;
+            }
+            #home p {
+                font-size: 0.9rem; 
+                margin-bottom: 1.5rem;
+            }
+
+            #about .about-content,
+            .experience-grid {
+                grid-template-columns: 1fr;
+            }
+
+            #about .about-content img {
+                margin: 0 auto 2rem auto;
+                display: block;
+            }
+
+            .contact-grid {
+                padding: 2rem;
+            }
+
+            .booking-form {
+                overflow-x: auto;
+                padding: 1rem;
+                background: #fdfdfd;
+                border-radius: 5px;
+            }
+        }
+
+        /* --- Makes the mobile menu scrollable on short screens (landscape) --- */
+        @media (max-height: 450px) and (orientation: landscape) {
+            .navbar ul.active {
+                max-height: calc(100vh - 70px);
+                overflow-y: auto;
+            }
+
+            #home {
+                height: auto;
+                min-height: 100vh;
+                padding-top: 100px;
+                padding-bottom: 40px;
+            }
+        }
+        .error-message {
+    color: #d93025; /* Red color for error text */
+    font-size: 0.8rem;
+    margin-top: 4px;
+    display: none; /* Hidden by default */
+}
+
+/* This class will be added by JavaScript to show the message */
+.error-message.visible {
+    display: block;
+}
+
+/* This class will be added to highlight the invalid input field */
+input.invalid, textarea.invalid, select.invalid {
+    border-color: #d93025; /* Red border for the invalid field */
+    border-width: 2px;
+}
+    </style>
+</head>
+<body>
+
+<div id="lightbox" class="lightbox">
+    <span class="lightbox-close">&times;</span>
+    <img class="lightbox-content" id="lightbox-img">
+</div>
+
+    <header class="header">
+        <nav class="navbar container">
+            <a href="#home" class="logo">RAHMAN RICH</a>
+            <ul class="nav-menu">
+                <li><a href="#home" class="nav-link">Home</a></li>
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#services" class="nav-link">Services</a></li>
+                <li><a href="#experience" class="nav-link">Experience</a></li>
+                <li><a href="#gallery" class="nav-link">Gallery</a></li>
+                <li><a href="#posters" class="nav-link">Posters</a></li>
+                <li><a href="#videos" class="nav-link">Videos</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+                <li class="cta-button"><a href="#contact">Book a Session</a></li>
+            </ul>
+            <div class="hamburger">
+                <i class="fas fa-bars"></i>
+            </div>
+        </nav>
+    </header>
+
+    <section id="home">
+        <h1>Abdul Rahman</h1>
+        <h3>Life Skills & Empowerment Trainer | Motivational Speaker</h3>
+        <p>Over 19 years of experience in transforming lives through engaging, interactive, and practical workshops designed to deliver a renewed sense of purpose.</p>
+        <a href="#services" class="btn">Explore My Workshops</a>
+    </section>
+
+    <section id="about" class="container">
+        <h2>Meet Abdul Rahman
+            <br> Director : R I C H <br>
+            (Rahman's Insight Counseling Home)
+        </h2> 
+        <div class="about-content">
+            <img src="/assets/Photos/007.jpg" alt="Abdul Rahman Profile Picture"> 
+            <div>
+                <h3>My Journey in Life Skills & Empowerment</h3>
+                <p>With a passion for unlocking human potential and a rich career spanning over 19 years, I have dedicated myself to empowering individuals and organisations. My journey has taken me from a counselling Institution in Thrissur to directing RICH, all with one goal: to provide practical strategies that foster a renewed sense of purpose.</p>
+                <p>I believe in interactive sessions that don't just teach, but inspire genuine change. My work with esteemed organisations like Sahodaya, KRSMA and ICI has reinforced my commitment to delivering valuable insights that resonate long after the workshop is over.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="services">
+        <div class="container">
+            <h2>How I Can Help</h2>
+            
+            <div class="services-grid">
+                <div class="service-card">
+                    <i class="fas fa-users"></i>
+                    <h3>Parenting Empowerment</h3>
+                    <p>Navigate the challenges of modern parenting with proven strategies for building stronger, healthier family relationships.</p>
+                    <a href="https://rahmanrichvengad.blogspot.com/search/label/Parenting" target="_blank" class="btn-small">
+                        Visit My Blog
+                    </a>
+                </div>
+                <div class="service-card">
+                    <i class="fas fa-chalkboard-teacher"></i>
+                    <h3>Teachers' Empowerment</h3>
+                    <p>Equipping educators with the tools and motivation to create inspiring and effective learning environments.</p>
+                     <a href="https://rahmanrichvengad.blogspot.com/search/label/Teachers" target="_blank" class="btn-small">
+                        Visit My Blog
+                    </a>
+                </div>
+                <div class="service-card">
+                    <i class="fas fa-lightbulb"></i>
+                    <h3>Student Motivation</h3>
+                    <p>Igniting a passion for learning in students, helping them overcome obstacles and achieve their academic and personal goals.</p>
+                     <a href="https://rahmanrichvengad.blogspot.com/search/label/Student" target="_blank" class="btn-small">
+                        Visit My Blog
+                    </a>
+                </div>
+                <div class="service-card">
+                    <i class="fas fa-heart"></i>
+                    <h3>Family Management</h3>
+                    <p>Providing counseling and practical advice to foster harmony, communication, and resilience within the family unit.</p>
+                     <a href="https://rahmanrichvengad.blogspot.com/search/label/Family" target="_blank" class="btn-small">
+                        Visit My Blog
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="experience" class="container">
+         <h2>My Journey & Credentials</h2>
+         <div class="experience-grid">
+             <div>
+                 <h3>Work Experience</h3>
+                 <div class="timeline">
+                     <div class="timeline-item">
+                         <h4>Director of RICH</h4>
+                         <p>Rahman Insight Counseling Home,Vengad,Kannur.</p>
+                     </div>
+                      <div class="timeline-item">
+                         <h4>Principal</h4>
+                         <p>Hidayath English High School, Pappinissery.</p>
+                     </div>                    
+                     <div class="timeline-item">
+                         <h4>Chief Faculty & Trainer</h4>
+                         <p>Insight Counseling Unit, Thrissur (8 years)</p>
+                     </div>
+                      <div class="timeline-item">
+                         <h4>Master Trainer</h4>
+                         <p>IAME Calicut (3 years)</p>
+                     </div>
+                     <div class="timeline-item">
+                         <h4>Trainer</h4>
+                         <p>Thrissur District Co-ordinator of CIGI (3 years)</p>
+                     </div>
+                 </div>
+             </div>
+             <div class="qualifications-list">
+                 <h3>Education & Qualifications</h3>
+                 <ul>
+                    <li><i class="fas fa-graduation-cap"></i>Master of Arts (MA) in Economics</li>
+                    <li><i class="fas fa-graduation-cap"></i>Bachelor of Education (B.Ed) in Social Science</li>
+                    <li><i class="fas fa-graduation-cap"></i>Postgraduate Diploma in Counseling Psychology</li>
+                 </ul>
+             </div>
+         </div>
+    </section> 
+    <section id="posters">
+        <div class="container">
+            <h2>Posters</h2>
+            <div class="poster-grid">
+                
+                <div class="poster-item">
+                    <img src="assets/Photos/p1.png" alt="Poster 1 Placeholder">
+                </div>
+                <div class="poster-item">
+                    <img src="assets/Photos/p2.png" alt="Poster 2 Placeholder">
+                </div>
+                <div class="poster-item">
+                    <img src="assets/Photos/p3.png" alt="Poster 3 Placeholder">
+                </div>
+                <div class="poster-item">
+                    <img src="assets/Photos/p4.png" alt="Poster 4 Placeholder">
+                </div>
+                <div class="poster-item ">
+                    <img src="assets/Photos/p5.png" alt="Poster 5 Placeholder">
+                </div>
+                <div class="poster-item">
+                    <img src="assets/Photos/p6.png" alt="Poster 6 Placeholder">
+                </div>
+                <div class="poster-item hidden">
+                    <img src="assets/Photos/p6.jpeg" alt="Poster 6 Placeholder">
+                </div>
+                <div class="poster-item hidden">
+                    <img src="assets/Photos/p7.png" alt="Poster 6 Placeholder">
+                </div>
+                <div class="poster-item hidden">
+                    <img src="assets/Photos/p8.png" alt="Poster 6 Placeholder">
+                </div>
+                <div class="poster-item hidden">
+                    <img src="assets/Photos/p10.jpeg" alt="Poster 6 Placeholder">
+                
+                </div>
+            <div class="poster-item hidden">
+                    <img src="assets/Photos/p11.png" alt="Poster 6 Placeholder">
+                </div>
+            
+                <div class="poster-item hidden">
+                    <img src="assets/Photos/p12.png" alt="Poster 6 Placeholder">
+                </div>
+            <div class="poster-item hidden">
+                    <img src="assets/Photos/p13.jpeg" alt="Poster 6 Placeholder">
+            </div>
+            <div class="poster-item hidden">
+                    <img src="assets/Photos/p14.jpeg" alt="Poster 6 Placeholder">
+             </div>
+            <div class="poster-item hidden">
+                    <img src="assets/Photos/p15.jpeg" alt="Poster 6 Placeholder">
+             </div>
+            <div class="poster-item hidden">
+                    <img src="assets/Photos/p16.jpeg" alt="Poster 6 Placeholder">
+                </div>
+            <div class="poster-item hidden">
+                    <img src="assets/Photos/p17.jpeg" alt="Poster 6 Placeholder">
+                </div>
+            <div class="poster-item hidden">
+                    <img src="assets/Photos/p18.jpeg" alt="Poster 6 Placeholder">
+                </div>
+             </div>
+                <div class="poster-btn-container">
+                <button id="showMorePostersBtn" class="btn">Show More</button>
+            </div>
+
+        </div>
+    </section>
+<section id="gallery">
+        <div class="container">
+            <h2>Photo Gallery</h2>
+            <div class="gallery-grid">
+                
+                <div class="gallery-item">
+                    <img src="assets/Photos/g2.png" alt="Rahman Rich speaking at event">
+                </div>
+                <div class="gallery-item">
+                    <img src="assets/Photos/s6.png" alt="Audience listening to Rahman Rich">
+                </div>
+                <div class="gallery-item">
+                    <img src="assets/Photos/s9.png" alt="Rahman Rich receiving an award">
+                </div>
+                <div class="gallery-item">
+                    <img src="assets/Photos/006.jpg" alt="Rahman Rich at his desk">
+                </div>
+                <div class="gallery-item">
+                    <img src="assets/Photos/g4.png" alt="Speaking at event">
+                </div>
+                <div class="gallery-item">
+                    <img src="assets/Photos/g6.png" alt="Speaking at Hidayath High School">
+                </div>
+                <div class="gallery-item">
+                    <img src="assets/Photos/g3.png" alt="Presenting to a group">
+                </div>
+                 <div class="gallery-item hidden">
+                    <img src="assets/Photos/g5.png" alt="Speaking at event">
+                </div>
+                 <div class="gallery-item">
+                    <img src="assets/Photos/g10.png" alt="Audience members">
+                </div>
+                  <div class="gallery-item">
+                    <img src="assets/Photos/g9.png" alt="Speaking at event">
+                </div>
+ 
+                <div class="gallery-item hidden">
+                    <img src="assets/Photos/g7.png" alt="Speaking at event">
+                </div>
+
+                <div class="gallery-item hidden">
+                    <img src="assets/Photos/g8.png" alt="Speaking at event">
+                </div>
+                    <div class="gallery-item hidden">
+                    <img src="assets/Photos/g11.jpeg" alt="Speaking at event">
+                </div>
+                    <div class="gallery-item hidden">
+                    <img src="assets/Photos/g12.jpeg" alt="Speaking at event">
+                </div>
+                <div class="gallery-item hidden">
+                    <img src="assets/Photos/g13.jpeg" alt="Speaking at event">
+                </div>
+                <div class="gallery-item hidden">
+                    <img src="assets/Photos/g14.jpeg" alt="Speaking at event">
+                </div>
+                <div class="gallery-item hidden">
+                    <img src="assets/Photos/g15.jpeg" alt="Speaking at event">
+                </div>
+                <div class="gallery-item hidden">
+                    <img src="assets/Photos/g19.jpeg" alt="Speaking at event">
+                </div>
+                <div class="gallery-item hidden">
+                    <img src="assets/Photos/g17.jpeg" alt="Speaking at event">
+                </div>
+                <div class="gallery-item hidden">
+                    <img src="assets/Photos/g18.jpeg" alt="Speaking at event">
+                </div>
+                <div class="gallery-item hidden">
+                    <img src="assets/Photos/g16.jpeg" alt="Speaking at event">
+                </div>
+             </div>
+
+            <div class="gallery-btn-container">
+                <button id="showMoreBtn" class="btn">Show More</button>
+            </div>
+
+        </div>
+    </section>
+
+
+    <section id="videos">
+        <div class="container">
+            <h2>Videos</h2>
+            <div class="videos-grid">
+                
+                <div class="video-responsive">
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/QCPF6_WdWHU" title="Placeholder Video 1" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                <div class="video-responsive">
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/ufa2vg_hwzo" title="Placeholder Video 2" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                <div class="video-responsive">
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/JWUTq6U_0uM" title="Placeholder Video 3" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                <div class="video-responsive">
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/vz58X9OJGcM" title="Placeholder Video 3" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                   <div class="video-responsive">
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/4SfoZKrf9sg" title="Placeholder Video 3" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                   <div class="video-responsive">
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/CXRVTJtUDLk" title="Placeholder Video 3" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>               
+
+            </div>
+        </div>
+    
+    </section>
+
+    <section id="contact">
+        <div class="container">
+            <h2>Contact & Booking</h2>
+            <div class="contact-grid">
+<div class="booking-form">
+    <h3>Send a Booking Request</h3>
+    <form id="bookingForm" novalidate>
+        <div class="form-group">
+            <label for="org-name">Name and Address of the School / Organization<span class="required">*</span></label>
+            <textarea id="org-name" name="organization" rows="3" required></textarea>
+            <div class="error-message"></div>
+        </div>
+
+        <div class="form-group">
+            <label for="head-name">Name of Contact Person<span class="required">*</span></label>
+            <input type="text" id="head-name" name="headName" pattern="[a-zA-Z\s]+" title="Please enter a valid name (letters and spaces only)" required>
+            <div class="error-message"></div>
+        </div>
+
+        <div class="form-group">
+            <label for="designation">Designation<span class="required">*</span></label>
+            <input type="text" id="designation" name="designation" pattern="[a-zA-Z\s]+" title="Please enter a valid designation (letters and spaces only)" required>
+            <div class="error-message"></div>
+        </div>
+
+        <div class="form-group">
+            <label for="phone">Phone No<span class="required">*</span></label>
+            <input type="tel" id="phone" name="phone" pattern="\d{10}" maxlength="10" title="Please enter a 10-digit phone number" required>
+            <div class="error-message"></div>
+        </div>
+
+        <div class="form-group">
+            <label for="whatsapp">WhatsApp No<span class="required">*</span></label>
+            <input type="tel" id="whatsapp" name="whatsapp" pattern="\d{10}" maxlength="10" title="Please enter a 10-digit WhatsApp number" required>
+            <div class="error-message"></div>
+        </div>
+
+        <div class="form-group">
+            <label for="email">Email ID (Personal / Organisation)<span class="required">*</span></label>
+            <input type="email" id="email" name="email" title="Please enter a valid email address." required>
+            <div class="error-message"></div>
+        </div>
+        <div class="form-group">
+            <label for="service-required">Service Required<span class="required">*</span></label>
+            <select id="service-required" name="service" required>
+                <option value="" disabled selected>-- Select a Service --</option>
+                <option value="parenting">Parenting Empowerment</option>
+                <option value="teachers">Teachers' Empowerment</option>
+                <option value="student">Student Motivation</option>
+                <option value="family">Family Management</option>
+            </select>
+            <div class="error-message"></div>
+        </div>
+
+        <div class="form-group">
+            <label for="topic-preferred">Preferred Topic<span class="required">*</span></label>
+            <select id="topic-preferred" name="topic" required disabled>
+                <option value="" disabled selected>-- First select a service --</option>
+            </select>
+            <div class="error-message"></div>
+        </div>
+
+        <div class="form-group">
+            <label for="medium">Medium<span class="required">*</span></label>
+            <select id="medium" name="medium" required>
+            <option value="malayalam" selected>MALAYALAM</option>
+            </select>
+            <div class="error-message"></div>
+        </div>
+
+        <div class="form-group">
+            <label for="program-date">Preferred Date<span class="required">*</span></label>
+            <input type="date" id="program-date" name="programDate" required>
+            <div class="error-message"></div>
+        </div>
+
+        <div class="form-group">
+            <label for="venue">Venue (Full Address)<span class="required">*</span></label>
+            <input type="text" id="venue" name="venue" required>
+            <div class="error-message"></div>
+        </div>
+        
+        <button type="submit" class="btn">Submit Booking Request</button>
+    </form>
+</div>
+                </div>
+                <div class="contact-info">
+                    <h3>Direct Contact Details</h3>
+                    <p><i class="fas fa-phone"></i>+91 9497296349</p>
+                    <p><i class="fab fa-whatsapp"></i> +91 9497296349</p>
+                    <p><i class="fas fa-envelope"></i>rahmanrichvengad@gmail.com</p>
+                    <p><i class="fas fa-map-marker-alt"></i>Abdul Rahman Vengad<br>Director of RICH<br>PO. VENGAD, Kannur Dist.<br>PIN: 670612, Kerala</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-social">
+                <a href="https://www.youtube.com/channel/UC-dD6N_P4FpXjIL-1-sA5Q" target="_blank" aria-label="YouTube Channel">
+                    <i class="fab fa-youtube"></i>
+                </a>
+                <a href="https://wa.me/919497296349" target="_blank" aria-label="WhatsApp">
+                    <i class="fab fa-whatsapp"></i>
+                </a>
+            </div>
+            <p>&copy; 2025 Abdul Rahman. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        // --- Mobile Navigation Menu Toggle ---
+        const hamburger = document.querySelector('.hamburger');
+        const navMenu = document.querySelector('.nav-menu');
+
+        hamburger.addEventListener('click', () => {
+            hamburger.classList.toggle('active');
+            navMenu.classList.toggle('active');
+        });
+
+        // Close mobile menu when a link is clicked
+        document.querySelectorAll('.nav-link, .cta-button a').forEach(n => n.addEventListener('click', () => {
+            hamburger.classList.remove('active');
+            navMenu.classList.remove('active');
+        }));
+
+        // --- Active Link Highlighting on Scroll ---
+        const sections = document.querySelectorAll('section');
+        const navLi = document.querySelectorAll('.nav-menu li a');
+
+        window.addEventListener('scroll', () => {
+            let current = '';
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                const sectionHeight = section.clientHeight;
+                if (pageYOffset >= (sectionTop - sectionHeight / 3)) {
+                    current = section.getAttribute('id');
+                }
+            })
+            
+            navLi.forEach(a => {
+                a.classList.remove('active');
+                if (a.getAttribute('href').includes(current)) {
+                    a.classList.add('active');
+                }
+            })
+        });
+
+        // --- Dynamic Topic Dropdown for Booking Form ---
+        const serviceSelect = document.getElementById('service-required');
+        const topicSelect = document.getElementById('topic-preferred');
+
+        const topics = {
+            parenting: [
+                "Effective Communication with Teens",
+                "Positive Discipline Techniques",
+                "Building Resilience in Children",
+                "Digital Parenting in the 21st Century"
+            ],
+            teachers: [
+                "Advanced Classroom Management",
+                "Motivating Underachieving Students",
+                "Preventing Teacher Burnout",
+                "Integrating Technology in the Classroom"
+            ],
+            student: [
+                "Goal Setting & Lifelong Achievement",
+                "Overcoming Exam Anxiety",
+                "Developing a Growth Mindset",
+                "Leadership Skills for Young Adults"
+            ],
+            family: [
+                "Conflict Resolution Strategies",
+                "Effective Family Budgeting",
+                "Balancing Work and Family Life",
+                "Strengthening Family Bonds"
+            ]
+        };
+
+        serviceSelect.addEventListener('change', (e) => {
+            const selectedService = e.target.value;
+            topicSelect.innerHTML = '<option value="" disabled selected>-- Select a Topic --</option>';
+            if (selectedService) {
+                topicSelect.disabled = false;
+                const relevantTopics = topics[selectedService];
+                relevantTopics.forEach(topic => {
+                    const option = document.createElement('option');
+                    option.value = topic.toLowerCase().replace(/ /g, '-');
+                    option.textContent = topic;
+                    topicSelect.appendChild(option);
+                });
+            } else {
+                topicSelect.disabled = true;
+            }
+        });
+
+    // --- SCRIPT FOR FORM VALIDATION, LIGHTBOX, AND SHOW MORE BUTTONS ---
+    document.addEventListener('DOMContentLoaded', function() {
+        
+        // --- Form Validation Script ---
+        const dateInput = document.getElementById('program-date');
+        if (dateInput) {
+            const today = new Date();
+            const yyyy = today.getFullYear();
+            let mm = today.getMonth() + 1; // Months are 0-indexed
+            let dd = today.getDate();
+            
+            if (mm < 10) mm = '0' + mm;
+            if (dd < 10) dd = '0' + dd;
+            
+            const minDate = `${yyyy}-${mm}-${dd}`;
+            dateInput.setAttribute('min', minDate);
+        }
+
+        const bookingForm = document.getElementById('bookingForm');
+        const submitButton = bookingForm.querySelector('button[type="submit"]');
+
+        const fieldsToValidate = [
+            { id: 'org-name', required: true, message: 'This field is required.' },
+            { id: 'head-name', required: true, pattern: /^[a-zA-Z\s]+$/, message: 'Please enter a valid name (letters only).' },
+            { id: 'designation', required: true, pattern: /^[a-zA-Z\s]+$/, message: 'Please enter a valid designation (letters only).' },
+            { id: 'phone', required: true, pattern: /^\d{10}$/, message: 'Please enter a 10-digit phone number.' },
+            { id: 'whatsapp', required: true, pattern: /^\d{10}$/, message: 'Please enter a 10-digit WhatsApp number.' },
+            // MODIFIED: Added email validation
+            { id: 'email', required: true, pattern: /^[^\s@]+@[^\s@]+\.[^\s@]+$/, message: 'Please enter a valid email address.' },
+            // END MODIFIED
+            { id: 'service-required', required: true, message: 'Please select a service.' },
+            { id: 'topic-preferred', required: true, message: 'Please select a topic.' },
+            { id: 'medium', required: true, message: 'This field is required.' },
+            { id: 'program-date', required: true, type: 'date', message: 'Please select a valid date.' },
+            { id: 'venue', required: true, message: 'Please enter the venue.' }
+        ];
+
+        fieldsToValidate.forEach(field => {
+            const input = document.getElementById(field.id);
+            if (input) {
+                const eventType = (input.tagName.toLowerCase() === 'select' || input.type === 'date') ? 'change' : 'input';
+                input.addEventListener(eventType, () => {
+                    validateField(input, field);
+                });
+            }
+        });
+
+        if (bookingForm) {
+            bookingForm.addEventListener('submit', function(event) {
+                event.preventDefault(); 
+
+                let isFormValid = true;
+                fieldsToValidate.forEach(field => {
+                    const input = document.getElementById(field.id);
+                    if (!input.disabled && !validateField(input, field)) {
+                        isFormValid = false;
+                    }
+                });
+
+                if (isFormValid) {
+                    submitButton.disabled = true;
+                    submitButton.textContent = 'Submitting...';
+                    const formData = new FormData(bookingForm);
+
+                    // --- Using your requested pi-monitor URL ---
+                    fetch('https://pi-monitor.tailb72c55.ts.net/booking', { 
+                        method: 'POST',
+                        body: formData
+                    })
+                    .then(response => response.json())
+                    .then(data => {
+                        alert(data.message); 
+                        if (data.message.includes('successfully')) {
+                           bookingForm.reset();
+                           topicSelect.innerHTML = '<option value="" disabled selected>-- First select a service --</option>';
+                           topicSelect.disabled = true;
+                        }
+                    })
+                    .catch(error => {
+                        console.error('Error:', error);
+                        alert('Could not connect to the booking server. Please try again later.');
+                    })
+                    .finally(() => {
+                        submitButton.disabled = false;
+                        submitButton.textContent = 'Submit Booking Request';
+                    });
+                }
+            });
+        }
+        
+        function validateField(input, rules) {
+            let isValid = true;
+            let errorMessage = '';
+            const value = input.value.trim();
+
+            if (rules.required && !value) {
+                isValid = false;
+                errorMessage = rules.message;
+            } else if (rules.pattern && !rules.pattern.test(value)) {
+                isValid = false;
+                errorMessage = input.title || rules.message;
+            } else if (rules.type === 'date' && value) {
+                const selectedDate = new Date(value + 'T00:00:00');
+                const today = new Date();
+                today.setHours(0, 0, 0, 0); 
+                if (selectedDate < today) {
+                    isValid = false;
+                    errorMessage = 'Please select today or a date in the future.';
+                }
+            }
+
+            if (isValid) {
+                clearError(input);
+            } else {
+                showError(input, errorMessage);
+            }
+            return isValid;
+        }
+
+        function showError(input, message) {
+            const formGroup = input.parentElement;
+            const errorDiv = formGroup.querySelector('.error-message');
+            input.classList.add('invalid');
+            errorDiv.textContent = message;
+            errorDiv.classList.add('visible');
+        }
+
+        function clearError(input) {
+            const formGroup = input.parentElement;
+            const errorDiv = formGroup.querySelector('.error-message');
+            input.classList.remove('invalid');
+            if (errorDiv) {
+                errorDiv.classList.remove('visible');
+                errorDiv.textContent = '';
+            }
+        }
+
+        // --- Universal Lightbox Script ---
+        const lightbox = document.getElementById('lightbox');
+        const lightboxImg = document.getElementById('lightbox-img');
+        const closeBtn = document.querySelector('.lightbox-close');
+        
+        // This selector now finds images in BOTH the gallery and poster sections
+        const clickableImages = document.querySelectorAll('#gallery .gallery-item img, #posters .poster-item img');
+
+        clickableImages.forEach(img => {
+            img.addEventListener('click', function() {
+                lightbox.style.display = 'block';
+                lightboxImg.src = this.src;
+            });
+        });
+
+        function closeLightbox() {
+            lightbox.style.display = 'none';
+        }
+
+        closeBtn.addEventListener('click', closeLightbox);
+        lightbox.addEventListener('click', function(e) {
+            if (e.target === lightbox) {
+                closeLightbox();
+            }
+        });
+
+        // --- Show More Gallery Script ---
+        const showMoreBtn = document.getElementById('showMoreBtn');
+        const hiddenGalleryItems = document.querySelectorAll('#gallery .gallery-item.hidden');
+
+        if (showMoreBtn) {
+            showMoreBtn.addEventListener('click', function() {
+                hiddenGalleryItems.forEach(item => {
+                    item.classList.remove('hidden');
+                });
+                showMoreBtn.style.display = 'none'; 
+            });
+        }
+
+        // --- NEW: Show More Posters Script ---
+        const showMorePostersBtn = document.getElementById('showMorePostersBtn');
+        const hiddenPosterItems = document.querySelectorAll('#posters .poster-item.hidden');
+
+        if (showMorePostersBtn) {
+            showMorePostersBtn.addEventListener('click', function() {
+                hiddenPosterItems.forEach(item => {
+                    item.classList.remove('hidden');
+                });
+                showMorePostersBtn.style.display = 'none';
+            });
+        }
+
+    });
+</script>
+</body>
+</html>
